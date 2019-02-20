@@ -1,0 +1,21 @@
+{
+    "custom_identifier": "uuid4",
+    "name": "name",
+    "contact": {
+        "email": "email",
+        "phone": "phone_number"
+    },
+    "location": {
+        "country_code": "country_code",
+        "country": "country",
+        "city": "city",
+        "postal": "postalcode",
+        "address": "street_address"
+    },
+    "friends": [
+        {"name": "name"},
+        {"name": "name"},
+        {"name": "name"},
+        {"name": "name"}
+    ]
+}
