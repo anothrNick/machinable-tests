@@ -1,0 +1,10 @@
+{
+    "firstName": "first_name",
+    "lastName": "last_name",
+    "birthDate": "date_time",
+    "age": "random_digit_not_null",
+    "profession": {
+      "title": "job",
+      "years": "random_digit_not_null"
+    }
+}

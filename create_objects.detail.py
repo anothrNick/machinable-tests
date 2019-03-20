@@ -25,12 +25,12 @@ logger.disabled = False
 PROJECT_HOST = "https://one.machinable.io"
 API_KEY = "2a3e5add-a0ca-4493-a0ab-474c6b1aad45"
 PATHS = {
-    "API": "/api/people"
+    "API": "/api/detailPeople"
 }
 
 SLEEP_TIME = .5
 
-humanSchema = load_json_from_file('./schemas/people.json')
+humanSchema = load_json_from_file('./schemas/people.details.json')
 fakerSchema = FakerSchema()
 fake = Faker()
 
@@ -50,6 +50,8 @@ def generateJSON():
         friends.append(fake.name())
 
     person["friends"] = friends
+    person["profession"]["responsibilities"] = fake.text()
+    person["birthDate"] = person["birthDate"].isoformat()+"Z"
 
     return person
 
