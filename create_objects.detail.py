@@ -50,7 +50,7 @@ def generateJSON():
         friends.append(fake.name())
 
     person["friends"] = friends
-    person["profession"]["responsibilities"] = fake.text()
+    person["profession"]["responsibilites"] = [fake.text()]
     person["birthDate"] = person["birthDate"].isoformat()+"Z"
 
     return person
