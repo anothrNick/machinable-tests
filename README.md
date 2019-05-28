@@ -2,7 +2,9 @@
 
 The `scripts/project_usage.py` file creates usage for a project. It assumes the project has the following 2 API Resources configured:
 
-## /api/count
+## API Resources
+
+### /api/count
 
 Stores a count per person accessed by this script. The count is incremented each time that person is retrieved (meta data).
 
@@ -19,7 +21,7 @@ Stores a count per person accessed by this script. The count is incremented each
 }
 ```
 
-## /api/people
+### /api/people
 
 Stores a list of people.
 
@@ -75,7 +77,9 @@ Stores a list of people.
 
 A collection will also be managed by this script:
 
-## /collections/metrics
+## Collections
+
+### /collections/metrics
 
 Keeps track of request metrics for visualization later.
 
