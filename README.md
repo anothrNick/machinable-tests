@@ -2,13 +2,25 @@
 
 The `scripts/project_usage.py` file creates usage for a project. It assumes the project has the following 2 API Resources configured:
 
+## Docker
+
+This script can be run in a docker container by running the following commands.
+
+```sh
+# build image
+$ docker build -t machinable-usage .
+
+# run script in container
+$ docker run -d --restart=always --name=usage machinable-usage python3 scripts/project_usage.py <project name> --username=<project username> --password=<project user password>
+```
+
 ## API Resources
 
 ### /api/count
 
 Stores a count per person accessed by this script. The count is incremented each time that person is retrieved (meta data).
 
-```
+```json
 {
     "peopleId": {
         "type": "string",
@@ -25,7 +37,7 @@ Stores a count per person accessed by this script. The count is incremented each
 
 Stores a list of people.
 
-```
+```json
 {
   "age": {
     "description": "Age in years which must be equal to or greater than zero.",
@@ -83,7 +95,7 @@ A collection will also be managed by this script:
 
 Keeps track of request metrics for visualization later.
 
-```
+```json
 {
     "status_code": {
         "type": "integer",
